@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WaveForm — Assignment 5</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <!-- GSAP from CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════
+     LANDING PAGE SECTIONS
+     All sections are pre-built. Your animations.js
+     file will bring them to life.
+═══════════════════════════════════════════ -->
+
+<!-- NAV -->
+<nav class="nav" id="mainNav">
+    <div class="nav-inner">
+        <div class="nav-logo">
+            <span class="nav-logo-icon">🎵</span>
+            <span class="nav-logo-text">WaveForm</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#features">Features</a></li>
+            <li><a href="#stats">Stats</a></li>
+            <li><a href="#playlist">Playlist</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+        </ul>
+        <a href="#" class="nav-cta">Get Early Access</a>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+    <div class="hero-inner">
+        <div class="hero-eyebrow" id="heroEyebrow">🚀 Seed Funded — We're Building</div>
+        <h1 class="hero-title" id="heroTitle">
+            <span class="hero-line" id="heroLine1">Music streaming,</span>
+            <span class="hero-line hero-line-accent" id="heroLine2">finally done right.</span>
+        </h1>
+        <p class="hero-sub" id="heroSub">
+            We got laid off. They stole our idea. So we built it better.<br>
+            WaveForm is the music platform that actually listens to you.
+        </p>
+        <div class="hero-actions" id="heroActions">
+            <a href="#" class="btn-primary">Start Free Trial</a>
+            <a href="#" class="btn-ghost">Watch Demo ▶</a>
+        </div>
+        <div class="hero-badges" id="heroBadges">
+            <span class="badge">✓ No ads ever</span>
+            <span class="badge">✓ Offline mode</span>
+            <span class="badge">✓ Lossless audio</span>
+            <span class="badge">✓ AI-powered discovery</span>
+        </div>
+    </div>
+
+    <!-- Decorative floating cards -->
+    <div class="hero-float-cards" id="heroFloatCards">
+        <div class="float-card fc1" id="floatCard1">
+            <span class="fc-icon">🎵</span>
+            <div class="fc-text">
+                <span class="fc-title">Midnight Signal</span>
+                <span class="fc-sub">Nova Pulse · Electronic</span>
+            </div>
+            <span class="fc-play">▶</span>
+        </div>
+        <div class="float-card fc2" id="floatCard2">
+            <span class="fc-icon">🎸</span>
+            <div class="fc-text">
+                <span class="fc-title">Golden Hour</span>
+                <span class="fc-sub">Elm & Cedar · Indie</span>
+            </div>
+            <span class="fc-play">▶</span>
+        </div>
+        <div class="float-card fc3" id="floatCard3">
+            <span class="fc-icon">🎤</span>
+            <div class="fc-text">
+                <span class="fc-title">Velvet Room</span>
+                <span class="fc-sub">Sable Shore · R&B</span>
+            </div>
+            <span class="fc-play">▶</span>
+        </div>
+    </div>
+</section>
+
+<!-- STATS TICKER -->
+<div class="stats-ticker" id="statsTicker">
+    <div class="ticker-inner">
+        <div class="ticker-stat" id="statUsers">
+            <span class="ticker-num" id="numUsers">0</span>
+            <span class="ticker-label">Beta Users</span>
+        </div>
+        <div class="ticker-divider"></div>
+        <div class="ticker-stat" id="statTracks">
+            <span class="ticker-num" id="numTracks">0</span>
+            <span class="ticker-label">Tracks Available</span>
+        </div>
+        <div class="ticker-divider"></div>
+        <div class="ticker-stat" id="statArtists">
+            <span class="ticker-num" id="numArtists">0</span>
+            <span class="ticker-label">Artists</span>
+        </div>
+        <div class="ticker-divider"></div>
+        <div class="ticker-stat" id="statFunding">
+            <span class="ticker-num" id="numFunding">$0</span>
+            <span class="ticker-label">Seed Funding</span>
+        </div>
+    </div>
+</div>
+
+<!-- FEATURES -->
+<section class="features" id="features">
+    <div class="section-inner">
+        <h2 class="section-title" id="featuresTitle">Built different.</h2>
+        <p class="section-sub" id="featuresSub">Every feature we wanted at BeatFlow — and everything they refused to build.</p>
+        <div class="features-grid" id="featuresGrid">
+            <div class="feature-card" id="feat0">
+                <div class="feat-icon">🎯</div>
+                <h3>Smart Discovery</h3>
+                <p>AI that learns your taste, not your ad profile. No sponsored tracks, ever.</p>
+            </div>
+            <div class="feature-card" id="feat1">
+                <div class="feat-icon">🔊</div>
+                <h3>Lossless Audio</h3>
+                <p>Studio-quality streaming at every tier. Because you deserve to hear every detail.</p>
+            </div>
+            <div class="feature-card" id="feat2">
+                <div class="feat-icon">📱</div>
+                <h3>Offline Everywhere</h3>
+                <p>Download any track, playlist, or album. No internet? No problem.</p>
+            </div>
+            <div class="feature-card" id="feat3">
+                <div class="feat-icon">🎵</div>
+                <h3>Playlist Intelligence</h3>
+                <p>The feature they stole. Now built better, faster, and fully transparent.</p>
+            </div>
+            <div class="feature-card" id="feat4">
+                <div class="feat-icon">🤝</div>
+                <h3>Artist-First Revenue</h3>
+                <p>70% of every subscription goes directly to the artists you listen to.</p>
+            </div>
+            <div class="feature-card" id="feat5">
+                <div class="feat-icon">🔒</div>
+                <h3>Zero Data Selling</h3>
+                <p>We don't sell your data. We don't rent it. We don't even look at it ourselves.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PLAYLIST SHOWCASE (A4 connection) -->
+<section class="playlist-section" id="playlist">
+    <div class="section-inner">
+        <h2 class="section-title light" id="playlistTitle">Our launch playlist.</h2>
+        <p class="section-sub light" id="playlistSub">
+            These are the tracks that got us through the build. They'll be available on day one.
+        </p>
+        <div class="playlist-grid" id="playlistGrid">
+            <div class="pl-track" id="plt0">
+                <span class="pl-num">01</span>
+                <span class="pl-icon">🎵</span>
+                <div class="pl-info"><span class="pl-title">Midnight Signal</span><span class="pl-artist">Nova Pulse</span></div>
+                <span class="pl-genre">Electronic</span>
+                <span class="pl-dur">3:34</span>
+            </div>
+            <div class="pl-track" id="plt1">
+                <span class="pl-num">02</span>
+                <span class="pl-icon">🎸</span>
+                <div class="pl-info"><span class="pl-title">Golden Hour</span><span class="pl-artist">Elm & Cedar</span></div>
+                <span class="pl-genre">Indie</span>
+                <span class="pl-dur">3:42</span>
+            </div>
+            <div class="pl-track" id="plt2">
+                <span class="pl-num">03</span>
+                <span class="pl-icon">🎤</span>
+                <div class="pl-info"><span class="pl-title">Velvet Room</span><span class="pl-artist">Sable Shore</span></div>
+                <span class="pl-genre">R&amp;B</span>
+                <span class="pl-dur">3:21</span>
+            </div>
+            <div class="pl-track" id="plt3">
+                <span class="pl-num">04</span>
+                <span class="pl-icon">🎧</span>
+                <div class="pl-info"><span class="pl-title">Ghost Frequencies</span><span class="pl-artist">Nova Pulse</span></div>
+                <span class="pl-genre">Electronic</span>
+                <span class="pl-dur">4:13</span>
+            </div>
+            <div class="pl-track" id="plt4">
+                <span class="pl-num">05</span>
+                <span class="pl-icon">🎼</span>
+                <div class="pl-info"><span class="pl-title">Trailhead</span><span class="pl-artist">Elm & Cedar</span></div>
+                <span class="pl-genre">Indie</span>
+                <span class="pl-dur">3:28</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing" id="pricing">
+    <div class="section-inner">
+        <h2 class="section-title" id="pricingTitle">Simple pricing.</h2>
+        <p class="section-sub" id="pricingSub">No hidden fees. No surprise charges. Cancel any time.</p>
+        <div class="pricing-grid" id="pricingGrid">
+            <div class="price-card" id="priceCard0">
+                <div class="price-tier">Free</div>
+                <div class="price-amount">$0<span>/mo</span></div>
+                <ul class="price-features">
+                    <li>✓ 40 hours/month streaming</li>
+                    <li>✓ Standard audio quality</li>
+                    <li>✓ Mobile &amp; desktop</li>
+                    <li>✗ No offline</li>
+                    <li>✗ No lossless</li>
+                </ul>
+                <a href="#" class="price-btn">Get Started</a>
+            </div>
+            <div class="price-card price-card-featured" id="priceCard1">
+                <div class="price-popular">Most Popular</div>
+                <div class="price-tier">Pro</div>
+                <div class="price-amount">$9<span>/mo</span></div>
+                <ul class="price-features">
+                    <li>✓ Unlimited streaming</li>
+                    <li>✓ Lossless audio</li>
+                    <li>✓ Offline downloads</li>
+                    <li>✓ Smart discovery</li>
+                    <li>✓ No ads, ever</li>
+                </ul>
+                <a href="#" class="price-btn price-btn-primary">Start Free Trial</a>
+            </div>
+            <div class="price-card" id="priceCard2">
+                <div class="price-tier">Artist</div>
+                <div class="price-amount">$15<span>/mo</span></div>
+                <ul class="price-features">
+                    <li>✓ Everything in Pro</li>
+                    <li>✓ Upload your own tracks</li>
+                    <li>✓ Revenue dashboard</li>
+                    <li>✓ Direct fan messaging</li>
+                    <li>✓ Priority support</li>
+                </ul>
+                <a href="#" class="price-btn">Get Started</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer" id="siteFooter">
+    <div class="footer-inner">
+        <div class="footer-logo">
+            <span>🎵</span>
+            <span>WaveForm</span>
+        </div>
+        <p class="footer-tagline">Built by people who actually love music.</p>
+        <p class="footer-sub">© 2025 WaveForm Inc. — Assignment 5 submission</p>
+    </div>
+</footer>
+
+
+<!-- ═══════════════════════════════════════════
+     ASSIGNMENT PANEL
+═══════════════════════════════════════════ -->
+<div class="assignment-panel">
+<div class="assignment-inner">
+
+    <div class="asgn-eyebrow">
+        <span class="chip chip-module">GSAP Animation</span>
+        <span class="chip chip-num">Assignment 5</span>
+        <span class="chip chip-pts">20 Points</span>
+    </div>
+
+    <h1 class="asgn-title">WaveForm — You Got Funded. Now Launch.</h1>
+    <p class="asgn-intro">
+        The scenario, all five tasks, and the rubric are below.
+        The landing page is <strong>live above</strong> — scroll through it and
+        watch it transform as you complete each animation task.
+    </p>
+
+    <!-- SCENARIO -->
+    <div class="scenario-box">
+        <div class="scenario-label">📋 THE SCENARIO</div>
+        <p>
+            Remember BeatFlow? They laid you off. Oh, and by the way — they took your idea, shipped it as their own feature the very next week, and didn't even change the name.
+        </p>
+        <p>
+            You were furious. You wrote a Medium post. You vented on LinkedIn. And then — you got to work.
+        </p>
+        <p>
+            Three months later, you have a deck, a prototype, and a meeting with a VC. The meeting goes well. <em>Really</em> well. You just got <strong>$500,000 in seed funding</strong> to build WaveForm — the music platform you always wanted to build.
+        </p>
+        <p>
+            Your investors want a public launch page live by Friday. The design team has finished the HTML and CSS. <strong>Your job: make it move.</strong>
+        </p>
+    </div>
+
+    <!-- BEFORE YOU START -->
+    <h2 class="asgn-section-title">Before You Start: Explore the Files</h2>
+    <p class="asgn-body">The landing page above is fully built — all HTML structure and CSS styling is done. Your <code>animations.js</code> file is the only thing you write. Before coding, do this:</p>
+    <ul class="asgn-list">
+        <li>Scroll through the page slowly — notice there are 5 distinct sections: Hero, Stats ticker, Features grid, Playlist, and Pricing. Each section is one animation task</li>
+        <li>Open DevTools and inspect element IDs — every element you need is already tagged: <code>#heroTitle</code>, <code>#heroLine1</code>, <code>#heroLine2</code>, <code>#featuresGrid</code>, <code>.feature-card</code>, <code>.pl-track</code>, <code>.price-card</code>, and so on</li>
+        <li>Open the browser console and type <code>gsap.to('#heroTitle', {opacity: 0, duration: 1})</code> — the title should fade out. Type <code>gsap.to('#heroTitle', {opacity: 1, duration: 1})</code> to bring it back. This confirms GSAP is loaded and working</li>
+        <li>Notice that <strong>everything starts invisible</strong> — elements have <code>opacity: 0</code> by default in the CSS. Your animations will fade and slide them in. If the page looks blank, that is correct — your animations.js will reveal everything</li>
+        <li>Read through the <code>animations.js</code> scaffold top to bottom before writing anything — pay attention to which task uses <code>gsap.timeline()</code> vs individual <code>gsap.from()</code> calls</li>
+    </ul>
+
+    <!-- TASK CARDS -->
+    <h2 class="asgn-section-title">Tasks</h2>
+
+    <!-- T1 -->
+    <div class="task-card t1">
+        <div class="task-head">
+            <span class="task-badge">Task 1</span>
+            <div class="task-title-row">
+                <h3>Hero Section — Timeline Sequence</h3>
+                <span class="pts-chip">5 pts</span>
+            </div>
+        </div>
+        <div class="task-body">
+            <p>The hero section should reveal itself in a carefully timed sequence when the page loads. Use a <strong>GSAP Timeline</strong> so each element animates one after another.</p>
+            <ul>
+                <li>Create a GSAP timeline: <code>const heroTl = gsap.timeline()</code></li>
+                <li>Add these animations <strong>in order</strong> using <code>.from()</code> on the timeline:
+                    <ul>
+                        <li><code>#heroEyebrow</code> — from <code>opacity: 0, y: -20</code>, duration <code>0.5s</code></li>
+                        <li><code>#heroLine1</code> — from <code>opacity: 0, x: -40</code>, duration <code>0.6s</code></li>
+                        <li><code>#heroLine2</code> — from <code>opacity: 0, x: 40</code>, duration <code>0.6s</code>, overlapping with previous by <code>"-=0.3"</code></li>
+                        <li><code>#heroSub</code> — from <code>opacity: 0, y: 20</code>, duration <code>0.5s</code></li>
+                        <li><code>#heroActions</code> — from <code>opacity: 0, y: 20</code>, duration <code>0.4s</code></li>
+                        <li><code>#heroBadges</code> — from <code>opacity: 0</code>, duration <code>0.4s</code></li>
+                    </ul>
+                </li>
+                <li>After the timeline, animate the three floating cards using <code>gsap.from()</code> with <strong>stagger</strong>:
+                    <ul>
+                        <li>Target: <code>'.float-card'</code></li>
+                        <li>From: <code>opacity: 0, y: 60, rotation: -5</code></li>
+                        <li>Duration: <code>0.7s</code>, ease: <code>'back.out(1.5)'</code></li>
+                        <li>Stagger: <code>0.15</code> — so each card animates 0.15 seconds after the previous</li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="hint-box">💡 <strong>Hint:</strong> In a timeline, <code>heroTl.from(element, {props})</code> queues animations sequentially. The <code>"-=0.3"</code> position parameter overlaps the current animation with the previous one by 0.3 seconds — making it feel fluid rather than robotic. Stagger is a property inside the <code>gsap.from()</code> options object: <code>stagger: 0.15</code>.</div>
+        </div>
+    </div>
+
+    <!-- T2 -->
+    <div class="task-card t2">
+        <div class="task-head">
+            <span class="task-badge">Task 2</span>
+            <div class="task-title-row">
+                <h3>Stats Counter — Number Roll Animation</h3>
+                <span class="pts-chip">4 pts</span>
+            </div>
+        </div>
+        <div class="task-body">
+            <p>The stats ticker should count up from zero to its final value when it first enters the viewport — a classic "number roll" effect using GSAP's <code>gsap.to()</code>.</p>
+            <ul>
+                <li>First, fade the stats ticker in: <code>gsap.from('#statsTicker', {opacity: 0, y: 30, duration: 0.6})</code></li>
+                <li>Create a counter object: <code>const counters = { users: 0, tracks: 0, artists: 0 }</code></li>
+                <li>Use <code>gsap.to(counters, { ... })</code> to animate the counter values:
+                    <ul>
+                        <li>Animate to: <code>users: 12400, tracks: 85000, artists: 3200</code></li>
+                        <li>Duration: <code>2</code> seconds</li>
+                        <li>Ease: <code>'power2.out'</code></li>
+                        <li>Add an <code>onUpdate</code> callback that runs every frame:
+                            <ul>
+                                <li>Update <code>#numUsers</code> to <code>Math.floor(counters.users).toLocaleString()</code></li>
+                                <li>Update <code>#numTracks</code> to <code>Math.floor(counters.tracks).toLocaleString()</code></li>
+                                <li>Update <code>#numArtists</code> to <code>Math.floor(counters.artists).toLocaleString()</code></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>Set <code>#numFunding</code> text to <code>"$500K"</code> after a 0.5s delay using <code>gsap.delayedCall(0.5, function() {...})</code></li>
+            </ul>
+            <div class="hint-box">💡 <strong>Hint:</strong> <code>gsap.to()</code> on a plain JavaScript object (not a DOM element) animates its numeric properties. The <code>onUpdate</code> function fires every animation frame — use it to read the current interpolated value and write it to the DOM. <code>gsap.delayedCall(seconds, callback)</code> is GSAP's version of setTimeout.</div>
+        </div>
+    </div>
+
+    <!-- T3 -->
+    <div class="task-card t3">
+        <div class="task-head">
+            <span class="task-badge">Task 3</span>
+            <div class="task-title-row">
+                <h3>Features Grid — Stagger Reveal</h3>
+                <span class="pts-chip">4 pts</span>
+            </div>
+        </div>
+        <div class="task-body">
+            <p>The 6 feature cards should cascade in with a stagger effect — each card appearing slightly after the one before it.</p>
+            <ul>
+                <li>Animate the section title and subtitle first using a short timeline:
+                    <ul>
+                        <li><code>#featuresTitle</code> — from <code>opacity: 0, y: 30</code>, duration <code>0.5s</code></li>
+                        <li><code>#featuresSub</code> — from <code>opacity: 0, y: 20</code>, duration <code>0.4s</code>, with <code>"-=0.2"</code> overlap</li>
+                    </ul>
+                </li>
+                <li>Then animate all <code>.feature-card</code> elements together with stagger:
+                    <ul>
+                        <li>From: <code>opacity: 0, y: 50, scale: 0.95</code></li>
+                        <li>Duration: <code>0.5s</code>, ease: <code>'power2.out'</code></li>
+                        <li>Stagger: <code>{ each: 0.1, from: 'start' }</code> — cards reveal left-to-right, top-to-bottom</li>
+                    </ul>
+                </li>
+                <li>Add a hover animation on each <code>.feature-card</code> — loop through them with <code>document.querySelectorAll('.feature-card').forEach(card => {...})</code>:
+                    <ul>
+                        <li><code>mouseenter</code>: <code>gsap.to(card, {y: -6, scale: 1.02, duration: 0.2})</code></li>
+                        <li><code>mouseleave</code>: <code>gsap.to(card, {y: 0, scale: 1, duration: 0.2})</code></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="hint-box">💡 <strong>Hint:</strong> <code>stagger: { each: 0.1, from: 'start' }</code> is the object form of stagger — it gives you more control than just passing a number. <code>from: 'start'</code> animates from the first element to the last. Try <code>from: 'center'</code> or <code>from: 'end'</code> to see the difference.</div>
+        </div>
+    </div>
+
+    <!-- T4 -->
+    <div class="task-card t4">
+        <div class="task-head">
+            <span class="task-badge">Task 4</span>
+            <div class="task-title-row">
+                <h3>Playlist — Slide-In From Left</h3>
+                <span class="pts-chip">4 pts</span>
+            </div>
+        </div>
+        <div class="task-body">
+            <p>The playlist tracks should slide in one by one from the left side — like a track list loading in real time.</p>
+            <ul>
+                <li>Animate the section header using a timeline:
+                    <ul>
+                        <li><code>#playlistTitle</code> — from <code>opacity: 0, x: -30</code>, duration <code>0.5s</code></li>
+                        <li><code>#playlistSub</code> — from <code>opacity: 0, x: -20</code>, duration <code>0.4s</code>, with <code>"-=0.2"</code> overlap</li>
+                    </ul>
+                </li>
+                <li>Then animate all <code>.pl-track</code> elements with stagger:
+                    <ul>
+                        <li>From: <code>opacity: 0, x: -60</code></li>
+                        <li>Duration: <code>0.4s</code>, ease: <code>'power2.out'</code></li>
+                        <li>Stagger: <code>0.12</code> — each track slides in 0.12s after the previous</li>
+                        <li>Add a small delay so the tracks start appearing <em>after</em> the header: <code>delay: 0.4</code></li>
+                    </ul>
+                </li>
+                <li>Add a click interaction on each track row — when a <code>.pl-track</code> is clicked:
+                    <ul>
+                        <li><code>gsap.to(track, {backgroundColor: 'rgba(29,185,84,0.15)', duration: 0.2})</code> to highlight it</li>
+                        <li>Use <code>gsap.to(otherTracks, {backgroundColor: 'transparent', duration: 0.2})</code> to clear the other rows</li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="hint-box">💡 <strong>Hint:</strong> For the click interaction, use <code>querySelectorAll('.pl-track')</code> to get all tracks, then inside each click listener, use <code>gsap.to(allTracks, {backgroundColor: 'transparent', duration: 0.2})</code> to reset everything first, then <code>gsap.to(clickedTrack, {backgroundColor: 'rgba(29,185,84,0.15)', duration: 0.2})</code> to highlight just the one that was clicked.</div>
+        </div>
+    </div>
+
+    <!-- T5 -->
+    <div class="task-card" style="border-color:rgba(167,139,250,0.25);">
+        <div class="task-head" style="background:rgba(167,139,250,0.05);border-bottom-color:rgba(167,139,250,0.2);">
+            <span class="task-badge" style="background:#ede9fe;color:#5b21b6;">Task 5</span>
+            <div class="task-title-row">
+                <h3>Pricing Cards — Bounce In + Button Pulse</h3>
+                <span class="pts-chip">3 pts</span>
+            </div>
+        </div>
+        <div class="task-body">
+            <p>The three pricing cards should bounce in with a playful elastic effect, and the featured card's CTA button should pulse to draw the eye.</p>
+            <ul>
+                <li>Animate the section header:
+                    <ul>
+                        <li><code>#pricingTitle</code> and <code>#pricingSub</code> — fade in from <code>y: 30, opacity: 0</code> with a short stagger of <code>0.15</code></li>
+                    </ul>
+                </li>
+                <li>Animate the pricing cards with stagger:
+                    <ul>
+                        <li>Target all <code>.price-card</code> elements</li>
+                        <li>From: <code>opacity: 0, y: 60, scale: 0.9</code></li>
+                        <li>Duration: <code>0.6s</code>, ease: <code>'back.out(1.7)'</code> — this gives the elastic bounce effect</li>
+                        <li>Stagger: <code>0.15</code></li>
+                    </ul>
+                </li>
+                <li>Add a repeating pulse animation on the featured card's CTA button:
+                    <ul>
+                        <li>Target: <code>'.price-btn-primary'</code></li>
+                        <li>Use <code>gsap.to()</code> with: <code>scale: 1.05, duration: 0.8, repeat: -1, yoyo: true, ease: 'sine.inOut'</code></li>
+                        <li><code>repeat: -1</code> means loop forever; <code>yoyo: true</code> makes it go back and forth</li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="hint-box">💡 <strong>Hint:</strong> <code>ease: 'back.out(1.7)'</code> creates an overshoot effect — the element goes slightly past its final position before settling back. The number inside controls how much it overshoots. Try values between 1 and 3 to feel the difference. <code>yoyo: true</code> reverses the animation on every other repeat — perfect for breathing/pulse effects.</div>
+        </div>
+    </div>
+
+    <!-- RUBRIC -->
+    <h2 class="asgn-section-title">Grading Rubric</h2>
+    <table class="rubric-table">
+        <thead>
+            <tr>
+                <td style="width:35%;padding:12px;"><span style="color:#fff;"><strong>Criteria</strong></span></td>
+                <td style="width:10%;padding:12px;text-align:center;"><span style="color:#fff;"><strong>Points</strong></span></td>
+                <td style="width:55%;padding:12px;"><span style="color:#fff;"><strong>Description</strong></span></td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr style="background:#fff;">
+                <td style="padding:10px;"><strong>Task 1: Hero Timeline</strong></td>
+                <td style="padding:10px;text-align:center;">5</td>
+                <td style="padding:10px;">Timeline created correctly. All 6 hero elements animate in sequence. Overlap (<code>"-=0.3"</code>) used on heroLine2. Float cards animate with stagger and correct from-properties.<br><em>Deductions: -1 per missing element or broken sequence; -1 if stagger not used on float cards</em></td>
+            </tr>
+            <tr style="background:#f8f9fa;">
+                <td style="padding:10px;"><strong>Task 2: Stats Counter</strong></td>
+                <td style="padding:10px;text-align:center;">4</td>
+                <td style="padding:10px;">Numbers animate from 0 to target values. <code>onUpdate</code> callback updates the DOM each frame. <code>toLocaleString()</code> used for formatting. Funding stat displayed with <code>delayedCall</code>.<br><em>Deductions: -1 per missing component</em></td>
+            </tr>
+            <tr style="background:#fff;">
+                <td style="padding:10px;"><strong>Task 3: Features Stagger</strong></td>
+                <td style="padding:10px;text-align:center;">4</td>
+                <td style="padding:10px;">Section header animates first. All 6 cards stagger in correctly. Stagger object form used with <code>each</code> and <code>from</code>. Hover interactions added with correct enter/leave values.<br><em>Deductions: -1 per missing requirement</em></td>
+            </tr>
+            <tr style="background:#f8f9fa;">
+                <td style="padding:10px;"><strong>Task 4: Playlist Slide-In</strong></td>
+                <td style="padding:10px;text-align:center;">4</td>
+                <td style="padding:10px;">Tracks slide in from left with stagger. Delay present so tracks appear after header. Click interaction highlights selected track and clears others.<br><em>Deductions: -1 per missing requirement; -1 if click interaction missing</em></td>
+            </tr>
+            <tr style="background:#fff;">
+                <td style="padding:10px;"><strong>Task 5: Pricing Bounce + Pulse</strong></td>
+                <td style="padding:10px;text-align:center;">3</td>
+                <td style="padding:10px;">Cards animate in with <code>back.out</code> ease. Stagger applied. Featured button pulses with <code>repeat: -1</code> and <code>yoyo: true</code>.<br><em>Deductions: -1 per missing requirement</em></td>
+            </tr>
+            <tr style="background:#e3f2fd;">
+                <td style="padding:10px;" colspan="2"><strong>TOTAL POINTS</strong></td>
+                <td style="padding:10px;text-align:center;font-size:18px;"><strong>20</strong></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- TIPS -->
+    <h2 class="asgn-section-title">Tips for Success</h2>
+    <ul class="asgn-list">
+        <li>📖 <strong>Read the scaffold in animations.js top to bottom</strong> — each task section has detailed TODO comments. Read all five before writing a single line</li>
+        <li>🧪 <strong>Test each animation in the console first</strong> — GSAP commands typed in the DevTools console run instantly on the live page. Prototype there, then copy to your file</li>
+        <li>⏱️ <strong>Timeline position matters</strong> — <code>"-=0.3"</code> overlaps with the previous animation; <code>"+=0.2"</code> adds a gap. Play with these to get timing that feels right</li>
+        <li>🔁 <strong>yoyo + repeat: -1</strong> is your loop pattern — any animation you want to run forever and reverse automatically uses this combination</li>
+        <li>📐 <strong>back.out vs power2.out</strong> — use <code>power2.out</code> for smooth, natural motion; use <code>back.out(1.7)</code> when you want a playful overshoot/bounce</li>
+        <li>💡 <strong>onUpdate fires every frame</strong> — it's the right place to sync DOM text content with an animating number. Keep it lightweight (no DOM queries inside it)</li>
+    </ul>
+
+    <!-- RESOURCES -->
+    <h2 class="asgn-section-title">Resources</h2>
+    <ul class="asgn-list">
+        <li><a href="https://gsap.com/docs/v3/GSAP/gsap.from()" target="_blank" rel="noopener">GSAP Docs: gsap.from()</a></li>
+        <li><a href="https://gsap.com/docs/v3/GSAP/gsap.to()" target="_blank" rel="noopener">GSAP Docs: gsap.to()</a></li>
+        <li><a href="https://gsap.com/docs/v3/GSAP/Timeline/" target="_blank" rel="noopener">GSAP Docs: Timeline</a></li>
+        <li><a href="https://gsap.com/docs/v3/GSAP/gsap.stagger/" target="_blank" rel="noopener">GSAP Docs: Stagger</a></li>
+        <li><a href="https://gsap.com/docs/v3/Eases/" target="_blank" rel="noopener">GSAP Ease Visualizer</a></li>
+        <li><a href="https://gsap.com/docs/v3/GSAP/gsap.delayedCall()" target="_blank" rel="noopener">GSAP Docs: gsap.delayedCall()</a></li>
+        <li>Lecture notes and in-class GSAP examples</li>
+    </ul>
+
+    <!-- INTEGRITY -->
+    <div style="background-color:#fff3cd;border-left:5px solid #ffc107;padding:20px;margin:30px 0;border-radius:5px;">
+        <h4 style="margin-top:0;color:#856404;">⚠️ Academic Integrity Reminder</h4>
+        <p style="margin-bottom:0;color:#856404;">This is an individual assignment. You may discuss concepts with classmates, but all code must be your own work. Using AI tools to write your animations or copying solutions from online sources is considered academic dishonesty and will result in a zero on the assignment.</p>
+    </div>
+
+    <!-- SUBMISSION -->
+    <h2 class="asgn-section-title">Submission</h2>
+    <ul class="asgn-list">
+        <li>Submit <strong>two files</strong> on Canvas: <code>index.html</code> and <code>animations.js</code></li>
+        <li>Do not modify or submit <code>styles.css</code></li>
+        <li>All 5 animation sections should be working when you open the page in a browser</li>
+        <li>Your <code>animations.js</code> must have clearly commented sections for each task</li>
+    </ul>
+
+</div>
+</div>
+
+<script src="animations.js" defer></script>
+</body>
+</html>
